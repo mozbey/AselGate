@@ -29,12 +29,15 @@ Kaynak kodu bu depoda yer almaz. Derlenmiş dosyalar
 
 1. [Sürüm sayfasından](https://github.com/mozbey/AselGate/releases) `AselGate-v1.11.2-ESP32C3-tam.bin`
    dosyasını indirin.
-2. Kartı USB ile bağlayın. Tarayıcıdan https://espressif.github.io/esptool-js/ adresine girin,
-   "Connect" ile kartı seçin, dosyayı **0x0** adresine yükleyip "Program" deyin.
-   Bu işlem kartta kayıtlı ayarları siler.
-3. Alternatif (komut satırı): `pip install esptool`, ardından
+2. Kartı USB ile bilgisayara bağlayın. Bilgisayarda Python 3 kurulu olmalıdır.
+3. Komut satırını açıp şu komutları çalıştırın:
+   `pip install esptool`
    `esptool --chip esp32c3 --port COMx write-flash 0x0 AselGate-v1.11.2-ESP32C3-tam.bin`
-   (Linux'ta port `/dev/ttyACM0` gibi olur.)
+   (`COMx` yerine Aygıt Yöneticisi'nde görünen portu yazın, örneğin `COM5`. Linux'ta port
+   `/dev/ttyACM0` gibi olur.) Bu işlem kartta kayıtlı ayarları siler.
+4. Komut satırı kullanmak istemezseniz Espressif'in ESP Launchpad sayfası da denenebilir:
+   https://espressif.github.io/esp-launchpad/ . Bu sayfanın bu `.bin` dosyasını kabul edip
+   etmediğini denemedim; önerilen yöntem komut satırıdır.
 
 ## Telsiz tarafı ayarı (ASELSAN 4000 Serisi)
 
