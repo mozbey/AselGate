@@ -36,6 +36,16 @@ Kaynak kodu bu depoda yer almaz. Derlenmiş dosyalar
    `esptool --chip esp32c3 --port COMx write-flash 0x0 AselGate-v1.11.2-ESP32C3-tam.bin`
    (Linux'ta port `/dev/ttyACM0` gibi olur.)
 
+## Telsiz tarafı ayarı (ASELSAN 4000 Serisi)
+
+Kurulum ve bağlantıların tamamı yapıldıktan sonra telsizde:
+
+1. Telsiz menülerinden **APRS IG\*** seçeneğini açın (OKEY ile onaylayın).
+2. Menülerden **APRS MENÜSÜ**'ne girin.
+3. Cihazın **sağ üstten ikinci tuşuna** basın.
+4. Ekranda **"APRS AKT"** yazısını görmeniz gerekir. Bu yazı görünmüyorsa telsiz APRS verisi
+   göndermiyordur ve AselGate paket alamaz.
+
 ## İlk kullanım
 
 1. Telefon ya da bilgisayarla **AselGate** adlı Wi-Fi ağına bağlanın. Şifre: `12345678`.
