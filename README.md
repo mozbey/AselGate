@@ -25,6 +25,19 @@ Kaynak kodu bu depoda yer almaz. Derlenmiş dosyalar
 - **GPS:** NEO-6M verisi MAX3232 üzerinden telsiz hattına gider. ESP32 bu veriyi yalnızca okur.
 - **Devre şeması:** [`devre-semasi/AselGate-v4.pdf`](devre-semasi/AselGate-v4.pdf)
 
+## APRS'te cihaz adı
+
+AselGate'in APRS-IS'e gönderdiği bütün paketler (konum, durum, telemetri, mesaj) hedef alanında
+**`AP2BIG`** cihaz kodunu (tocall) taşır. Bu kod APRS tocall listesinde **AselGate** adıyla
+kayıtlıdır, bu yüzden aprs.fi gibi sitelerde cihaz "AselGate" olarak görünür. Örnek:
+
+```
+TA2BI-10>AP2BIG,TCPIP*:>ASELSAN iGate - yAtolye /TA2BI
+```
+
+Mic-E konum biçimi açıkken konum paketinin hedef alanı enlemi taşır. O paketlerde cihaz adı
+görünmez, diğer paketlerde görünür.
+
 ## Kurulum (ilk kez)
 
 1. [Sürüm sayfasından](https://github.com/mozbey/AselGate/releases) `AselGate-v1.11.2-ESP32C3-tam.bin`
